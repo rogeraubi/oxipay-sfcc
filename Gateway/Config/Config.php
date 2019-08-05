@@ -65,7 +65,7 @@ class Config extends \Magento\Payment\Gateway\Config\Config {
         if ( $this->getValue( 'force_humm' ) ) {
             $is_after = true;
         }
-        $title = ( $is_after && $this->getSpecificCountry() == 'AU' ) ? 'Humm' : 'Oxipay';
+        $title = ( $is_after || $this->getSpecificCountry() == 'AU' ) ? 'Humm' : 'Oxipay';
 
         return $title;
     }
