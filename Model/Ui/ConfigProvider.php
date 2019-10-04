@@ -17,13 +17,14 @@ use Magento\Framework\View\Asset\Repository;
  * Class ConfigProvider
  */
 final class ConfigProvider implements ConfigProviderInterface {
-    const LAUNCH_TIME_URL = 'https://s3-ap-southeast-2.amazonaws.com/humm-variables/nz-launch-time.txt';
-    const LAUNCH_TIME_DEFAULT = "2019-10-07 14:30:00 UTC";
-    const LAUNCH_TIME_CHECK_ENDS = "2020-01-07 13:30:00 UTC";
+    const LAUNCH_TIME_URL = 'https://humm-variables.s3-ap-southeast-2.amazonaws.com/nz-launch-time.txt';
+    const LAUNCH_TIME_DEFAULT = "2020-02-23 13:30:00 UTC";
+    const LAUNCH_TIME_CHECK_ENDS = "2020-05-23 13:30:00 UTC";
 
     protected $_gatewayConfig;
     protected $_scopeConfigInterface;
     protected $customerSession;
+    protected $sessionQuote;
     protected $_urlBuilder;
     protected $request;
     protected $_assetRepo;

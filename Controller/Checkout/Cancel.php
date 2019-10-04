@@ -19,5 +19,4 @@ class Cancel extends AbstractAction {
         }
         $this->_redirect( 'checkout/cart' );
     }
-
 }
