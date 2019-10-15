@@ -1,0 +1,19 @@
+<?php 
+    $type = $block->getData('humm_widget_type');    
+    $priceSelector = $block->getData('humm_widget_price');   
+    $elementSelector = $block->getData('humm_widget_element');
+    if($block->getData('humm_widget_min_amt'))
+    {
+        $minAmount = "data-min=".$block->getData('humm_widget_min_amt')." ";
+    } else {
+        $minAmount = "";
+    }
+
+    if($block->getData('humm_widget_max_amt'))
+    {
+        $maxAmount = "data-max=".$block->getData('humm_widget_max_amt')." ";
+    } else {
+        $maxAmount = "";
+    }        
+?>            
+<p><script <?php echo $minAmount.$maxAmount ?>src="https://widgets.shophumm.com.au/content/scripts/price-info.js?price-selector=<?php echo $priceSelector ?>&element=<?php echo $elementSelector ?><?php echo $type ?>"></script></p>

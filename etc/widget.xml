@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+            <widget class="Humm\HummPaymentGateway\Block\Widget\Hummwidget" id="humm_hummpaymentgateway_hummwidget">
+                <label>Humm Widget</label>
+                <description>Configure the Humm widget based on https://docs.shophumm.com.au/widgets/price_info/</description>
+                <parameters>
+                    <parameter name="humm_widget_type" xsi:type="select" visible="true" source_model="Humm\HummPaymentGateway\Model\Type">
+                        <label translate="true">Humm widget type</label>
+                    </parameter>
+                    <parameter name="humm_widget_price" sort_order="20" visible="true" xsi:type="text" required="true">
+                        <label>Humm widget price selector</label>
+                        <value>span.price</value>
+                    </parameter>
+                    <parameter name="humm_widget_element" sort_order="21" visible="true" xsi:type="text" required="true">
+                        <label>Humm widget element selector</label>
+                        <value>.product-info-price</value>
+                    </parameter>
+                    <parameter name="humm_widget_min_amt" sort_order="22" visible="true" xsi:type="text">
+                        <label>Humm widget min amount</label>                                
+                    </parameter>
+                    <parameter name="humm_widget_max_amt" sort_order="23" visible="true" xsi:type="text">
+                        <label>Humm widget max amount</label>                                
+                    </parameter>                    
+                </parameters>
+            </widget>
+</widgets>
